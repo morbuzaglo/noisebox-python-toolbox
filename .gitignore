@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+noisebox/core_py_new/
+noisebox/core_py.new/
+tests/_out/
+*.gdb/
+*.tif
+*.pyt.xml
+.claude/

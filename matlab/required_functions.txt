@@ -1,0 +1,14 @@
+# Functions the ArcGIS tools call. If one of them cannot be translated, nb_export_python stops and keeps the old Python core.
+run_field_3d
+run_case_3d
+run_acoustic_case
+nb_adiv
+nb_aatm
+nb_aatm_1996
+nb_energy_sum
+nb_compliance
+nb_enclosure_surfaces
+nb_material
+nb_dem_sample
+nb_bands
+nb_fingerprint

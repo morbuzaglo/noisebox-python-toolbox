@@ -1,0 +1,492 @@
+{
+ "generated": "2026-11-24T23:28:04",
+ "notes": [],
+ "matlab_core": "C:\\Arc GIS pro projects\\NoiseBoxPy\\matlab\\core",
+ "functions": {
+  "nb_aatm": {
+   "file": "nb_aatm.m",
+   "md5": "043a7115807881cf97d7acdba0eddce9",
+   "inputs": [
+    "d",
+    "T_C",
+    "RH",
+    "p_kPa",
+    "f"
+   ],
+   "outputs": [
+    "A",
+    "alpha"
+   ],
+   "override": false,
+   "accelerated": false
+  },
+  "nb_aatm_1996": {
+   "file": "nb_aatm_1996.m",
+   "md5": "208f232e14669e65648ca5a8dec16490",
+   "inputs": [
+    "d",
+    "T_C",
+    "RH"
+   ],
+   "outputs": [
+    "A",
+    "alpha"
+   ],
+   "override": false,
+   "accelerated": false
+  },
+  "nb_abar": {
+   "file": "nb_abar.m",
+   "md5": "f0654f4896877b6176c265389911d0b6",
+   "inputs": [
+    "Dz_top",
+    "Dz_side1",
+    "Dz_side2",
+    "Agr",
+    "extra"
+   ],
+   "outputs": [
+    "r"
+   ],
+   "override": false,
+   "accelerated": false
+  },
+  "nb_adiv": {
+   "file": "nb_adiv.m",
+   "md5": "2697a4f0ec309f2e03decbf87c194fe3",
+   "inputs": [
+    "d"
+   ],
+   "outputs": [
+    "A"
+   ],
+   "override": false,
+   "accelerated": false
+  },
+  "nb_agr": {
+   "file": "nb_agr.m",
+   "md5": "2e434016cd30b19aa91e240fd699216f",
+   "inputs": [
+    "Gs",
+    "Gm",
+    "Gr",
+    "hs",
+    "hr",
+    "dp",
+    "mode"
+   ],
+   "outputs": [
+    "r"
+   ],
+   "override": false,
+   "accelerated": false
+  },
+  "nb_agr_simplified": {
+   "file": "nb_agr_simplified.m",
+   "md5": "0621d86166388e2b5370818d2111f40d",
+   "inputs": [
+    "hm",
+    "d",
+    "dp",
+    "hs",
+    "hr"
+   ],
+   "outputs": [
+    "r"
+   ],
+   "override": false,
+   "accelerated": false
+  },
+  "nb_background_subtract": {
+   "file": "nb_background_subtract.m",
+   "md5": "38f38c29ada06e113b8c05d1faa7a1b5",
+   "inputs": [
+    "Ls",
+    "Lb"
+   ],
+   "outputs": [
+    "r"
+   ],
+   "override": false,
+   "accelerated": false
+  },
+  "nb_bands": {
+   "file": "nb_bands.m",
+   "md5": "c70758ddac10084910125bcca5af05a4",
+   "inputs": [],
+   "outputs": [
+    "b"
+   ],
+   "override": false,
+   "accelerated": false
+  },
+  "nb_bench_cases": {
+   "file": "nb_bench_cases.m",
+   "md5": "6312abe6f04e88346de839841dc4a8e3",
+   "inputs": [
+    "id"
+   ],
+   "outputs": [
+    "c"
+   ],
+   "override": false,
+   "accelerated": false
+  },
+  "nb_bench_run": {
+   "file": "nb_bench_run.m",
+   "md5": "25933c66fe961df1e727d8368760b1c3",
+   "inputs": [
+    "id",
+    "modeOverride"
+   ],
+   "outputs": [
+    "r"
+   ],
+   "override": false,
+   "accelerated": false
+  },
+  "nb_bench_scene": {
+   "file": "nb_bench_scene.m",
+   "md5": "8139ff54b43970a47e6003e6d5b2a71d",
+   "inputs": [
+    "id"
+   ],
+   "outputs": [
+    "s"
+   ],
+   "override": false,
+   "accelerated": false
+  },
+  "nb_butter_sos": {
+   "file": "nb_butter_sos.m",
+   "md5": "56f0d9d157cfddbe9be8e8e8226c7311",
+   "inputs": [
+    "n",
+    "Wn"
+   ],
+   "outputs": [
+    "sos"
+   ],
+   "override": false,
+   "accelerated": false
+  },
+  "nb_cmet": {
+   "file": "nb_cmet.m",
+   "md5": "a989b71383ca479ab1590071a3cade56",
+   "inputs": [
+    "C0",
+    "hs",
+    "hr",
+    "dp"
+   ],
+   "outputs": [
+    "C"
+   ],
+   "override": false,
+   "accelerated": false
+  },
+  "nb_compliance": {
+   "file": "nb_compliance.m",
+   "md5": "7073b75acda607e0dcbc3c880f85626e",
+   "inputs": [
+    "Lp",
+    "LpA",
+    "lim"
+   ],
+   "outputs": [
+    "r"
+   ],
+   "override": false,
+   "accelerated": false
+  },
+  "nb_dem_sample": {
+   "file": "nb_dem_sample.m",
+   "md5": "aa11ce765097ba6ebe21fa74d142b2e3",
+   "inputs": [
+    "dem",
+    "X",
+    "Y"
+   ],
+   "outputs": [
+    "z"
+   ],
+   "override": false,
+   "accelerated": true
+  },
+  "nb_dz": {
+   "file": "nb_dz.m",
+   "md5": "7a8ca8e6fdae2d5cc2d2dce807d8a1cc",
+   "inputs": [
+    "z",
+    "dss",
+    "dsr",
+    "d",
+    "e",
+    "mode",
+    "isLateral"
+   ],
+   "outputs": [
+    "r"
+   ],
+   "override": false,
+   "accelerated": false
+  },
+  "nb_enclosure": {
+   "file": "nb_enclosure.m",
+   "md5": "822e887abbecfafdb703257e6d9ebd47",
+   "inputs": [
+    "Lw_in",
+    "enc"
+   ],
+   "outputs": [
+    "r"
+   ],
+   "override": false,
+   "accelerated": false
+  },
+  "nb_enclosure_surfaces": {
+   "file": "nb_enclosure_surfaces.m",
+   "md5": "2d246d8ad47e52ca3e39a202265715ad",
+   "inputs": [
+    "Lw_in",
+    "surfaces",
+    "S_open"
+   ],
+   "outputs": [
+    "r"
+   ],
+   "override": false,
+   "accelerated": false
+  },
+  "nb_energy_sum": {
+   "file": "nb_energy_sum.m",
+   "md5": "c295c648122d2e4a69e6648d6b38f61e",
+   "inputs": [
+    "levels_dB",
+    "dim"
+   ],
+   "outputs": [
+    "L"
+   ],
+   "override": false,
+   "accelerated": false
+  },
+  "nb_estimate_lw": {
+   "file": "nb_estimate_lw.m",
+   "md5": "c8c3ede01e92748516818ba6283c06fe",
+   "inputs": [
+    "Lp",
+    "g",
+    "G",
+    "atm",
+    "Dc",
+    "srcDim"
+   ],
+   "outputs": [
+    "r"
+   ],
+   "override": false,
+   "accelerated": false
+  },
+  "nb_fingerprint": {
+   "file": "nb_fingerprint.m",
+   "md5": "44e174b830a4eb66b91e65c50f59aa5e",
+   "inputs": [],
+   "outputs": [
+    "fp"
+   ],
+   "override": true,
+   "accelerated": false
+  },
+  "nb_geom2d": {
+   "file": "nb_geom2d.m",
+   "md5": "b6570c74c45d78726a0d1d6917cc3bf6",
+   "inputs": [
+    "xp",
+    "zp",
+    "S",
+    "R"
+   ],
+   "outputs": [
+    "g"
+   ],
+   "override": false,
+   "accelerated": true
+  },
+  "nb_ground_factors": {
+   "file": "nb_ground_factors.m",
+   "md5": "44ea76582702f81f7decb7185aff6018",
+   "inputs": [
+    "areas",
+    "G0",
+    "Sxy",
+    "Rxy",
+    "hs",
+    "hr"
+   ],
+   "outputs": [
+    "gf"
+   ],
+   "override": false,
+   "accelerated": false
+  },
+  "nb_lateral": {
+   "file": "nb_lateral.m",
+   "md5": "e5db0960f4ced47a5f34ab5ef3fa9d9f",
+   "inputs": [
+    "obs",
+    "blockIdx",
+    "Sxyz",
+    "Rxyz",
+    "dem"
+   ],
+   "outputs": [
+    "lat"
+   ],
+   "override": false,
+   "accelerated": false
+  },
+  "nb_material": {
+   "file": "nb_material.m",
+   "md5": "ec4e0ccb082b72073c37dab325f377c2",
+   "inputs": [
+    "action",
+    "varargin"
+   ],
+   "outputs": [
+    "varargout"
+   ],
+   "override": false,
+   "accelerated": false
+  },
+  "nb_obstacles": {
+   "file": "nb_obstacles.m",
+   "md5": "1804f4042211b9b3ea3159c14fb34ed7",
+   "inputs": [
+    "action",
+    "varargin"
+   ],
+   "outputs": [
+    "varargout"
+   ],
+   "override": false,
+   "accelerated": true
+  },
+  "nb_profile_dem": {
+   "file": "nb_profile_dem.m",
+   "md5": "4d9161dcf7e1a306e3fad3c1566a6825",
+   "inputs": [
+    "dem",
+    "Sxy",
+    "Rxy"
+   ],
+   "outputs": [
+    "s",
+    "z",
+    "ok"
+   ],
+   "override": false,
+   "accelerated": false
+  },
+  "nb_receiver_3d": {
+   "file": "nb_receiver_3d.m",
+   "md5": "ff3bfa3692c56117eec90ee343df6de7",
+   "inputs": [
+    "dem",
+    "obs",
+    "Sxy",
+    "hSrc",
+    "Rxy",
+    "hRec",
+    "base"
+   ],
+   "outputs": [
+    "r"
+   ],
+   "override": false,
+   "accelerated": false
+  },
+  "run_acoustic_case": {
+   "file": "run_acoustic_case.m",
+   "md5": "657ec63bcfa14ed546467c708ac7c5ad",
+   "inputs": [
+    "c"
+   ],
+   "outputs": [
+    "out"
+   ],
+   "override": false,
+   "accelerated": false
+  },
+  "run_case_2d": {
+   "file": "run_case_2d.m",
+   "md5": "d47259000ef86c8de9b689df5ea635c9",
+   "inputs": [
+    "c"
+   ],
+   "outputs": [
+    "out"
+   ],
+   "override": false,
+   "accelerated": false
+  },
+  "run_case_3d": {
+   "file": "run_case_3d.m",
+   "md5": "4983f373eb1beef19b6ca0b782dc6592",
+   "inputs": [
+    "c"
+   ],
+   "outputs": [
+    "out"
+   ],
+   "override": false,
+   "accelerated": false
+  },
+  "run_field_2d": {
+   "file": "run_field_2d.m",
+   "md5": "95f60164661658f7972605d14ec78ba0",
+   "inputs": [
+    "c"
+   ],
+   "outputs": [
+    "out"
+   ],
+   "override": false,
+   "accelerated": false
+  },
+  "run_field_3d": {
+   "file": "run_field_3d.m",
+   "md5": "916780834d97350d22d7dbd8f3866b11",
+   "inputs": [
+    "c"
+   ],
+   "outputs": [
+    "out"
+   ],
+   "override": false,
+   "accelerated": false
+  }
+ },
+ "not_translated": {
+  "nb_calibrate": "nb_calibrate.m: function 'filter' is not defined in the MATLAB core and has no Python equivalent in noisebox/mrt.py",
+  "nb_diagnostics": "nb_diagnostics.m: function 'ver' is not defined in the MATLAB core and has no Python equivalent in noisebox/mrt.py",
+  "nb_octave_spl": "nb_octave_spl.m: function 'filter' is not defined in the MATLAB core and has no Python equivalent in noisebox/mrt.py",
+  "nb_testlab": "nb_testlab.m: function 'nb_octave_spl' is not defined in the MATLAB core and has no Python equivalent in noisebox/mrt.py",
+  "run_audio_analysis": "run_audio_analysis.m: function 'audioread' is not defined in the MATLAB core and has no Python equivalent in noisebox/mrt.py"
+ },
+ "required": [
+  "nb_aatm",
+  "nb_aatm_1996",
+  "nb_adiv",
+  "nb_bands",
+  "nb_compliance",
+  "nb_dem_sample",
+  "nb_enclosure_surfaces",
+  "nb_energy_sum",
+  "nb_fingerprint",
+  "nb_material",
+  "run_acoustic_case",
+  "run_case_3d",
+  "run_field_3d"
+ ]
+}
