@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-24T23:28:04",
+ "generated": "2026-11-24T23:52:02",
  "notes": [],
  "matlab_core": "C:\\Arc GIS pro projects\\NoiseBoxPy\\matlab\\core",
  "functions": {
@@ -134,7 +134,7 @@
   },
   "nb_bench_run": {
    "file": "nb_bench_run.m",
-   "md5": "25933c66fe961df1e727d8368760b1c3",
+   "md5": "aeba3981c436c5c3ddb66819ffdeb783",
    "inputs": [
     "id",
     "modeOverride"
@@ -215,7 +215,7 @@
   },
   "nb_dz": {
    "file": "nb_dz.m",
-   "md5": "7a8ca8e6fdae2d5cc2d2dce807d8a1cc",
+   "md5": "042ee85037e38370aa23aadd81fef1db",
    "inputs": [
     "z",
     "dss",
@@ -315,7 +315,7 @@
   },
   "nb_ground_factors": {
    "file": "nb_ground_factors.m",
-   "md5": "44ea76582702f81f7decb7185aff6018",
+   "md5": "36ea9b109eb9ef1ac23912f5b3a35c68",
    "inputs": [
     "areas",
     "G0",
@@ -390,7 +390,7 @@
   },
   "nb_receiver_3d": {
    "file": "nb_receiver_3d.m",
-   "md5": "ff3bfa3692c56117eec90ee343df6de7",
+   "md5": "c522e79f739016eccbeede46e15a8c34",
    "inputs": [
     "dem",
     "obs",
@@ -408,7 +408,7 @@
   },
   "run_acoustic_case": {
    "file": "run_acoustic_case.m",
-   "md5": "657ec63bcfa14ed546467c708ac7c5ad",
+   "md5": "df51b73fa03940a93f229dce8d1d52f0",
    "inputs": [
     "c"
    ],
@@ -475,18 +475,7 @@
   "run_audio_analysis": "run_audio_analysis.m: function 'audioread' is not defined in the MATLAB core and has no Python equivalent in noisebox/mrt.py"
  },
  "required": [
-  "nb_aatm",
-  "nb_aatm_1996",
   "nb_adiv",
-  "nb_bands",
-  "nb_compliance",
-  "nb_dem_sample",
-  "nb_enclosure_surfaces",
-  "nb_energy_sum",
-  "nb_fingerprint",
-  "nb_material",
-  "run_acoustic_case",
-  "run_case_3d",
   "run_field_3d"
  ]
 }

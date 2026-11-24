@@ -26,8 +26,9 @@ from m2py.mparser import MParseError, parse                    # noqa: E402
 
 
 def md5(path):
+    """md5 of a text file with Windows/Unix line endings treated alike (so git's line-ending conversion is harmless)."""
     with open(path, "rb") as f:
-        return hashlib.md5(f.read()).hexdigest()
+        return hashlib.md5(f.read().replace(b"\r\n", b"\n")).hexdigest()
 
 
 def read_text(path):

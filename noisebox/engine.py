@@ -50,7 +50,7 @@ def core_status():
         for f in os.listdir(cdir):
             if f.lower().endswith(".m"):
                 with open(os.path.join(cdir, f), "rb") as fh:
-                    now[f[:-2]] = hashlib.md5(fh.read()).hexdigest()
+                    now[f[:-2]] = hashlib.md5(fh.read().replace(b"\r\n", b"\n")).hexdigest()
     stale, missing = [], []
     for name, info in man["functions"].items():
         if info.get("override"):
