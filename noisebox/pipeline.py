@@ -379,10 +379,12 @@ def noise_map(p, log):
 
 def _add_noise_map(sink, run, c, has_lim, overall, p):
     top = sink.group("NoiseBox: " + run)
-    g_in = sink.group(run + " | 4 Inputs", top, visible=False)
-    g_ins = sink.group(run + " | 3 Inspect", top) if "cells" in c else None
-    g_lim = sink.group(run + " | 2 Allowed levels", top) if has_lim else None
-    g_res = sink.group(run + " | 1 Results", top)
+    # created bottom-up (a new group goes on top of the Contents pane, checked in Pro), so the order top to bottom is:
+    # inputs, inspect cells, allowed levels, results -> a click hits the inspect cells, not the raster below
+    g_res = sink.group(run + " | 4 Results", top)
+    g_lim = sink.group(run + " | 3 Allowed levels", top) if has_lim else None
+    g_ins = sink.group(run + " | 2 Inspect (click a cell)", top) if "cells" in c else None
+    g_in = sink.group(run + " | 1 Inputs", top)
     if "in_area" in c:
         sink.add(c["in_area"], g_in, run + " area", style=out.style_area)
     if "in_barriers" in c:

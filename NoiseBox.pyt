@@ -242,6 +242,40 @@ def _messages(P, with_sources=True):
             P["extra"].setErrorMessage(str(e))
 
 
+_AUTO = {"cell": None}
+
+
+def _fill_auto_cell(P):
+    """Show the automatic cell size in the dialog (the user may overwrite it). Same rule as the tool uses when empty:
+    area layer, else extent, else the sources' bounding box + 300 m; about 150 cells across."""
+    c = P["cell"]
+    if c.value is not None and _AUTO["cell"] is not None and c.value != _AUTO["cell"]:
+        return
+    try:
+        from noisebox import arcgis_io
+        box = None
+        if P["area"].value:
+            e = arcpy.Describe(P["area"].value).extent
+            box = (e.XMin, e.YMin, e.XMax, e.YMax)
+        elif P["extent"].value is not None:
+            e = P["extent"].value
+            box = (e.XMin, e.YMin, e.XMax, e.YMax)
+        elif P["sources"].value:
+            e = arcpy.Describe(P["sources"].value).extent
+            box = (e.XMin - 300.0, e.YMin - 300.0, e.XMax + 300.0, e.YMax + 300.0)
+        if box is None:
+            if c.value is not None:
+                c.value = None
+            _AUTO["cell"] = None
+            return
+        v = float(arcgis_io.auto_cell(box))
+        if c.value != v:
+            c.value = v
+        _AUTO["cell"] = v
+    except Exception:
+        pass
+
+
 # ---------------------------------------------------------------- toolbox
 class Toolbox:
     def __init__(self):
@@ -313,7 +347,7 @@ class NoiseMap:
         ps += [
             _P("area", "Calculation area (polygon layer) - optional", "GPFeatureLayer", geometry="Polygon"),
             _P("extent", "...or calculation area as an extent - optional", "GPExtent"),
-            _P("cell", "Cell size (m) - empty = automatic (about 150 cells across)", "GPDouble"),
+            _P("cell", "Cell size (m) - filled in automatically (about 150 cells across); change it if you want", "GPDouble"),
         ]
         ps += _p_settings() + _p_limits()
         ps += [
@@ -332,7 +366,9 @@ class NoiseMap:
         return True
 
     def updateParameters(self, parameters):
-        _fill_defaults(_by_name(parameters))
+        P = _by_name(parameters)
+        _fill_defaults(P)
+        _fill_auto_cell(P)
 
     def updateMessages(self, parameters):
         _messages(_by_name(parameters))

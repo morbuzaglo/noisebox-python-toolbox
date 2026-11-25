@@ -7,4 +7,5 @@ tests/_out/
 *.gdb/
 *.tif
 *.pyt.xml
+!NoiseBox.*.pyt.xml
 .claude/

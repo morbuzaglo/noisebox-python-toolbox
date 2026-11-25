@@ -257,7 +257,8 @@ def flat_dem(bbox, pad):
 def dem_from_raster(raster, sr, bbox, pad):
     """Clip/project the DEM to CRS `sr` over bbox+pad and return (dem dict, Z[iy, ix] y increasing, nodata fraction)."""
     arcpy = _arcpy()
-    desc = arcpy.Describe(raster)
+    # arcpy.Raster works for a map layer as well as a path; Describe of a layer has no bandCount
+    desc = arcpy.Raster(raster)
     if desc.bandCount != 1:
         raise NoiseBoxError("The DEM must be a single-band raster.")
     dsr = desc.spatialReference
